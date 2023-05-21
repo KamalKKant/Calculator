@@ -1,44 +1,74 @@
-.container {
-    max-width: 400px;
-    margin: 10vh auto 0 auto;
-    box-shadow: 0px 0px 43px 17px rgba(153,153,153,1);
-}
-
-#display {
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+  }
+  
+  .calculator {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #result {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 24px;
+    margin-bottom: 20px;
     text-align: right;
-    height: 70px;
-    line-height: 70px;
-    padding: 16px 8px;
-    font-size: 25px;
-}
-
-.buttons {
+    border: none;
+    background-color: rgb(242, 242, 242);
+    border-radius: 5px;
+  }
+  
+  .buttons {
     display: grid;
-    border-bottom: 1px solid #999;
-    border-left: 1px solid#999;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.buttons > div {
-    border-top: 1px solid #999;
-    border-right: 1px solid#999;
-}
-
-.button {
-    border: 0.5px solid #999;
-    line-height: 100px;
-    text-align: center;
-    font-size: 25px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+  }
+  
+  button {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(224, 224, 224);
     cursor: pointer;
-}
-
-#equal {
-    background-color: rgb(85, 85, 255);
-    color: white;
-}
-
-.button:hover {
-    background-color: #323330;
-    color: white;
-    transition: 0.5s ease-in-out;
-}
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  button:hover {
+    background-color: rgb(204, 204, 204);
+  }
+  
+  button.operator {
+    background-color: rgb(246, 176, 34);
+    color: #fff;
+  }
+  
+  button.operator:hover {
+    background-color: rgb(236, 156, 14);
+  }
+  
+  button.equal {
+    background-color: rgb(0, 120, 212);
+    color: #fff;
+  }
+  
+  button.equal:hover {
+    background-color: rgb(0, 100, 172);
+  }
+  
+  button.clear {
+    background-color: rgb(207, 82, 68);
+    color: #fff;
+  }
+  
+  button.clear:hover {
+    background-color: rgb(187, 62, 48);
+  }
+  
